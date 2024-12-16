@@ -11,6 +11,7 @@ class CreateProductsTable extends Migration {
       string('prod_name', length: 25);
       integer('prod_price');
       text('prod_desc');
+      
     });
   }
   

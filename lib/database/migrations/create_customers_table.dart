@@ -8,6 +8,7 @@ class CreateCustomersTable extends Migration {
    await createTableNotExists('customers', () {
       string('cust_id', length: 5);
       string('cust_name', length: 50);
+      string('password', length: 15);
       string('cust_address', length: 50);
       string('cust_city', length: 20);
       string('cust_state', length: 5);
