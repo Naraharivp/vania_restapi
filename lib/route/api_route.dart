@@ -5,6 +5,7 @@ import 'package:api_product/app/http/controllers/order_controller.dart';
 import 'package:api_product/app/http/controllers/orderitem_controller.dart';
 import 'package:api_product/app/http/controllers/productnote_controller.dart';
 import 'package:api_product/app/http/controllers/vendor_controller.dart';
+import 'package:api_product/app/http/controllers/auth_controller.dart';
 import 'package:api_product/app/http/middleware/authenticate.dart';
 import 'package:api_product/app/http/middleware/home_middleware.dart';
 import 'package:api_product/app/http/middleware/error_response_middleware.dart';
@@ -60,5 +61,8 @@ class ApiRoute implements Route {
     Router.post("/vendors", vendorController.store);
     Router.put("/vendors/{vendorId}", vendorController.update);
     Router.delete("/vendors/{vendorId}", vendorController.destroy);
+
+    Router.post("/auth/login", authController.login);
+    Router.post('/auth/register', authController.register);
   }
 }
